@@ -1,0 +1,15 @@
+.background-img {
+  background-image: url(backgroundImg.jpeg);
+  background-color: pink;
+  margin: auto;
+}
+.todo-item {
+  display: flex;
+}
+.todo-item > button {
+}
+.status-todo {
+  background-color: pink;
+  border-radius: 6px;
+  padding: 6px;
+}

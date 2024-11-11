@@ -2,34 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=++, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <link href="style.css " rel="stylesheet" />
   </head>
   <body>
-    <div>Hello</div>
-    <button onclick="sayHello()">Say Hello</button>
-    <button onclick="printName()">PRINT NAME</button>
-    <button onclick="deleteName()">DELETE NAME</button>
-    <button onclick="getName()">GET NAME</button>
-    <div id="get"></div>
-    <div id="name-container" style="font-size: large; color: blue"></div>
-    <script>
-      function sayHello() {
-        alert("Hello, World!");
-      }
-      function getName() {
-        let namecontainer = prompt("");
-        document.getElementById("get").textContent = namecontainer;
-      }
-      function printName() {
-        const nameContainerElement = document.getElementById("name-container");
-        nameContainerElement.innerText = "John Doe";
-      }
-      function deleteName() {
-        let dissapear = "";
-        const nameContainerElement = document.getElementById("name-container");
-        document.getElementById("get").innerHTML = dissapear;
-      }
-    </script>
+    <div class="background-img">
+      <h1>Todo List</h1>
+      <button onclick="addTodo()">Add to do</button>
+      <div id="tasks" class="todos"></div>
+
+      <script src="ToDo.js"></script>
+    </div>
   </body>
 </html>
