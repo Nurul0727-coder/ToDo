@@ -1,5 +1,5 @@
 .background-img {
-  background-image: url(backgroundImg.jpeg);
+  background-image: url(img.jpeg);
   background-color: pink;
   margin: auto;
 }
@@ -11,5 +11,5 @@
 .status-todo {
   background-color: pink;
   border-radius: 6px;
-  padding: 6px;
+  padding: 5px;
 }
