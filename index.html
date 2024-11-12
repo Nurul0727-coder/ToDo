@@ -7,13 +7,38 @@
     <link href="style.css " rel="stylesheet" />
   </head>
   <body>
-    <div class="background-img">
-      <h1>Todo List</h1>
-      <button onclick="addTodo()">Add to do</button>
-      <div id="tasks" class="todos"></div>
-
-      <script src="ToDo.js"></script>
+    <button onclick="addTodo()" class="add-button">Add to do</button>
+    <div class="cards">
+      <div class="background-img">
+        <h1 class="title">~ Todo List ~</h1>
+        <div id="tasks" class="todos"></div>
+        <script src="ToDo.js"></script>
+      </div>
+      <div class="background-img">
+        <h1 class="title">~ In progress ~</h1>
+        <div id="tasks" class="todos"></div>
+      </div>
+      <div class="background-img">
+        <h1 class="title">~ Done ~</h1>
+        <div id="tasks" class="todos"></div>
+      </div>
+      <div class="background-img">
+        <h1 class="title">~ Blocked ~</h1>
+        <div id="tasks" class="todos"></div>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="modal-content">
+        <h2>Enter task</h2>
+        <input type="text" id="task-name" />
+        <select id="task-status" value="Todo">
+          <option value="Todo">Todo</option>
+          <option value="Inprogress">Inprogress</option>
+          <option value="Done">Done</option>
+          <option value="Blocked">Blocked</option>
+        </select>
+        <button onclick="saveTodo()">Add task</button>
+      </div>
     </div>
   </body>
 </html>
-
