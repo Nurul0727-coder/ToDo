@@ -22,8 +22,8 @@
 }
 .add-button {
   background-color: pink;
-  margin-left: 20px;
-  margin-left: 70%;
+
+  margin-left: 46%;
   margin-top: 60px;
   height: 80px;
   width: 180px;
@@ -31,8 +31,6 @@
   font-weight: bold;
   color: white;
   border-radius: 5px;
-}
-.add-button.hover {
 }
 .todos {
 }
@@ -45,7 +43,7 @@
   background-color: pink;
   margin-top: 20px;
   border-radius: 10px;
-  height: 60px;
+  height: 54px;
   font-size: 23px;
 }
 .todo-item > button {
@@ -59,28 +57,56 @@
   top: 0;
   bottom: 0;
   overflow: auto;
-  background-color: lightpink;
+  background-color: rgba(246, 184, 193, 0.4);
+
   display: none;
 }
 .modal-open {
   display: block;
 }
 .modal-content {
-  background-color: beige;
-  margin: 100px auto;
-  width: 40%;
+  background-color: rgb(255, 191, 201);
+  margin: 500px auto;
+  width: 370px;
+  height: 376px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 16px;
   padding: 12px;
-  color: lightblue;
+  color: rgb(103, 191, 221);
 }
 .modal-content > input {
   padding: 6px;
 }
+.text {
+  font-weight: 700;
+}
+.text {
+  height: 29px;
+  width: 120px;
+  font-size: 24px;
+  width: 700;
+}
+.text1 {
+  margin-top: 110px;
+  height: 43px;
+  width: 290px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
 select {
   height: 40px;
   margin: 10px;
+}
+#task-status {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: start;
+  height: 43px;
+  width: 290px;
+  border-radius: 4px;
 }

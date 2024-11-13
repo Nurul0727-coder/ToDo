@@ -51,9 +51,8 @@ function renderOneList() {}
 function render() {
   for (let i = 0; i < todos.length; i++) {
     const containerName = `#${todos[i].status}`;
-    const todoList = document.querySelector("containerName");
-    console.log(todoList);
-    const taskList = todoList.querySelector("tasks");
+    const todoList = document.getElementById(containerName);
+    const taskList = document.querySelector("#tasks");
     taskList.innerHTML = "";
     const item = todos[i];
 
@@ -70,28 +69,32 @@ function render() {
     const btnEl = document.createElement("button");
     btnEl.innerText = "Edit";
     btnEl.onclick = function () {
-      const newName = prompt("Enter new name");
+      const newName = input("Enter new name");
       editName(i, newName);
     };
     //delete
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "delete";
+    deleteBtn.onclick = function () {
+      const deleteOne = input("delete");
+      deleteOne(i);
+    };
     element.appendChild(titleEl);
     element.appendChild(btnEl);
-    todoList.appendChild(element);
-    // add item to task container
+    element.appendChild(deleteBtn);
     taskList.appendChild(element);
   }
 }
 function addTodo() {
   const modal = document.querySelector("#modal");
   modal.style.display = "block";
-  const input = prompt("enter todo name");
-  // addOne({ name: input, status: "TODO" });
-  // render();
+  // const input = prompt("enter todo name");
+  addOne({ name: input, status: "TODO" });
+  render();
 }
 function saveTodo() {
   const inputValue = document.getElementById("task-name").value;
   const statusValue = document.getElementById("task-status").value;
-  console.log(statusValue);
   todos.push({
     name: inputValue,
     status: statusValue,
