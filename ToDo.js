@@ -71,6 +71,7 @@ function render() {
     btnEl.onclick = function () {
       const newName = input("Enter new name");
       editName(i, newName);
+      render();
     };
     //delete
     const deleteBtn = document.createElement("button");
@@ -83,7 +84,39 @@ function render() {
     element.appendChild(btnEl);
     element.appendChild(deleteBtn);
     taskList.appendChild(element);
+
+    // const task = ` <div class="task">
+    // <input type= "checkbox" class =task-ckeck">
+    // <span class="taskName">${taskName}</span>
+    // <button class="edit">
+    // <i class="fa-solid fa-pen-to-square"></i>
+    // </button>
+    // <button class= "delete">
+    // <i class="fa-solid fa-trash"></i>
+    // </button>
+    // </div>`;
+    // taskContainer.insertAdjacentHTML("beforeend", task);
   }
+
+  //     const updateTaskList = () => {
+  //       const taskList = document.getElementById("task-list");
+  //       taskList.innerHTML = "";
+  //       taskList.forEach((task))=> {
+  //       const listItem = document.createElement("li");
+  //       }
+
+  //       itemList.innerHTML =``
+  //       <div class=" taskItem">
+  //         <div class="task">
+  //           <input type="checkbox" class="checkbox" />
+  //           <p>Finish this project</p>
+  //         </div>
+  //         <div class="icons">
+  //           <img src="./ edit.png" />
+  //           <img src="./ delete.png" />
+  //         </div>
+  //       </div>`;
+  //  }
 }
 function addTodo() {
   const modal = document.querySelector("#modal");
